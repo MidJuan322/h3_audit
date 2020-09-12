@@ -1,5 +1,5 @@
 import requests
-
+from bs4 import BeautifulSoup
 
 class Getter:
     def __init__(self):
@@ -38,7 +38,7 @@ class Getter:
                     "url": url,
                     "status_code": custom_status if custom_status
                     else response.status_code,
-                    "html": '' if custom_status else response.text
+                    # "html": '' if custom_status else response.text
                 }
                 result.append(url_result)
 
